@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const ticketSchema = new Schema({
+var ticketSchema = new Schema({
     seat: {
         type: String,
         name: /[A-F][1-9]\d?/
@@ -16,4 +16,4 @@ const ticketSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('Ticket', ticketSchema)
+module.exports = mongoose.model('Ticket', ticketSchema);
