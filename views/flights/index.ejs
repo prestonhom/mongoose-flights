@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mongoose Flights#index</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <table>
+        <thead>
+        <tr>
+           <th>Airline</th>
+           <th>Flight Number</th>
+           <th>Departure</th>
+        </tr>    
+        </thead>
+        <tbody>
+            <% flights.forEach(function(f){ %>
+            <tr>
+                <td><%= f.airline%></td>
+                <td><%= f.flightNo%></td>
+                <td><%= f.departs%></td>
+                <td><a href="/flights/<%= f._id %>">details</a></td>
+            </tr>
+                
+            <% }); %>
+        </tbody>
+
+    </table>
+    
+  </body>
+</html>

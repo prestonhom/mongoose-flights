@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mongoose Flights#index</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      
+    <div>
+        Airline  <%= flight.airline %>
+    </div>
+    <div>
+        Flight Number<%= flight.flightNo %>
+    </div>
+    <div>
+        Departure <%= flight.departs %>
+    </div>      
+    <!-- <div>
+        <% flight.destinations.forEach(function(f){ %>
+
+        Destination <%= f.airport %>
+
+        <% }); %>  
+    </div>       -->
+
+        <form id="add-arrival-destination" method="POST"action="/flights/<%= flight._id%>/destinations">
+            <label>Destination</label>
+            <select name="airport"> 
+                <option value="AUS">AUS</option>
+                <option value="DAL">DAL</option>
+                <option value="LAX">LAX</option>
+                <option value="SEA">SEA</option>
+            </select>
+            <label>Arrival Time</label>
+                <input type="datetime-local" name = "arrival">
+                <input type="submit" value='Add Arrival'>
+        </form>
+    <section>
+        <% flight.destinations.forEach(function(f){ %>
+            <div>
+                Destination airport: <%= f.airport %>
+            </div>
+            <div>
+                Destination arrival: <%= f.arrival %>
+            </div>
+        <% }); %>
+    </section>
+  
+</body>
+</html>
