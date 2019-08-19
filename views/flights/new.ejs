@@ -5,18 +5,18 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-      <h1>Add new flight</h1>
-    <form action="/flights" method="POST">
-        <div>
+      <h1>Add New Flight</h1>
+    <form class='flights-form' action="/flights" method="POST">
+        <div class='flights-form-field'>
             Flights:
-            <input type="text" name='airline' value='type airline'>
-        <div>
+            <input type="text" name='airline' value='AUS, DAL, LAX,SEA'>
+        <div class='flights-form-field'>
             Flight Number:
             <input type="text" name='flightNo' value='add flight no'>
         </div>
         <div>
             Select Destination:
-            <select name="airport" =>
+            <select name="airport" >
                     <option value="AUS">Austin</option>
                     <option value="DAL">Dallas</option>
                     <option value="LAX">Los Angeles</option>
