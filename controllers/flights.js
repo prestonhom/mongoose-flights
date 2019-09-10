@@ -20,7 +20,10 @@ function index(req, res){
 function create(req,res){
 
     var flight = new Flight(req.body);
+
+    //we are creating a new instance when we refer to req.body as part of new Flight
         flight.save(function(err){
+
             if(err) 
             return res.render('flights/new');
             res.redirect('/flights');

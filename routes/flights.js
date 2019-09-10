@@ -9,5 +9,5 @@ router.get('/', flightsController.index);
 router.get('/new', flightsController.newFlight);
 router.get('/:id', flightsController.show)
 router.post('/', flightsController.create)
-
+//when there is post data then we can we going to execute the create method 
 module.exports = router;
